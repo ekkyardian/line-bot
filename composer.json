@@ -1,0 +1,17 @@
+{
+    "name": "ekkyardian/line-bot",
+    "description": "Simple line bot using php and slim framework",
+    "type": "project",
+    "require": {
+        "php": "^7.3",
+        "slim/slim": "^4.3",
+        "linecorp/line-bot-sdk": "^4.0",
+        "slim/psr7": "^1.2",
+        "nyholm/psr7": "^1.3",
+        "nyholm/psr7-server": "^1.0",
+        "guzzlehttp/psr7": "^1.6",
+        "http-interop/http-factory-guzzle": "^1.0",
+        "zendframework/zend-diactoros": "^2.2"
+    },
+    "minimum-stability": "stable"
+}
