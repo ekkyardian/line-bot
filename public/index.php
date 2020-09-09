@@ -15,8 +15,8 @@ use \LINE\LINEBot\SignatureValidator as SignatureValidator;
 $pass_signature = true;
 
 // set LINE channel_access_token and channel_secret
-$channel_access_token = "";
-$channel_secret = "";
+$channel_access_token = "p1K3gevKwsLHs2CUMGj6sMY2+yQRxewByyaO1hGsxADvcBmnA+rDPL4tBDfUla6Z6DYOudJpC/a4sYoXhqFN7a9Q9KJCEXjMToyIlbtrmxHomumlSNHU3hr97OeMEOjJyQ2m2B9YwXu1o43d29kvMwdB04t89/1O/w1cDnyilFU=";
+$channel_secret = "a6ddf7d18ecce77be5a8cb5529493c43";
  
 // inisiasi objek bot
 $httpClient = new CurlHTTPClient($channel_access_token);
@@ -31,7 +31,7 @@ $app->get('/', function (Request $request, Response $response, $args) {
 });
  
 // buat route untuk webhook
-$app->post('/webhook', function (Request $request, Response $response) use ($channel_secret, $bot, $httpClient, $pass_signature) {
+$app->post('https://line-bot-ekky.herokuapp.com/public/webhook', function (Request $request, Response $response) use ($channel_secret, $bot, $httpClient, $pass_signature) {
     // get request body and line signature header
     $body = $request->getBody();
     $signature = $request->getHeaderLine('HTTP_X_LINE_SIGNATURE');
