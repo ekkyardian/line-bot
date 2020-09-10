@@ -58,7 +58,7 @@ $app->post('https://line-bot-ekky.herokuapp.com/public/webhook', function (Reque
             if ($event['type'] == 'message') {
                 if($event['message']['type'] == 'text') {
                     // send same message as reply to user
-                    $result = $bot->replyText($event['replyToken'], 'Congratulation!');
+                    $result = $bot->replyText($event['replyToken'], 'Hello');
 
                     // or we can use replyMessage() instead to send reply message
                     // $textMessageBuilder = new TextMessageBuilder($event['message']['text']);
